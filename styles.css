@@ -1,1 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
 
+header {
+  background-color: #333;
+  padding: 10px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.sorting-options {
+  margin-bottom: 20px;
+}
+
+.sorting-options button {
+  padding: 8px 16px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.sorting-options button.active {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 8px 16px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.tabs button.active-tab {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.movie-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-list li {
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.movie-card {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.movie-card h2 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.movie-card p {
+  margin: 5px 0;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin-right: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
