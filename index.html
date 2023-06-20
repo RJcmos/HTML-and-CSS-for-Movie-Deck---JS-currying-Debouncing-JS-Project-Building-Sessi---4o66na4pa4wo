@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Deck</title>
+  <link rel="stylesheet" href="styles.css">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">-->
+</head>
+<body>
+  <header>
+    <h1><a href="#">Movie Deck</a></h1>
+  </header>
 
+  <div class="search-bar">
+    <input type="text" placeholder="Search by name..." autocomplete="off">
+    <button>Search</button>
+  </div>
+
+  <div class="sorting-options">
+    <button class="active">Sort by date (oldest to latest)</button>
+    <button>Sort by rating (least to most)</button>
+  </div>
+
+  <div class="tabs">
+    <button class="active-tab">All</button>
+    <button>Favorites</button>
+  </div>
+
+  <div class="movie-list">
+    <ul>
+      <li>
+        <div class="movie-card">
+          <img src="poster1.jpg" alt="Movie Poster">
+          <h2>Title 1</h2>
+          <p class="vote-count">100 votes</p>
+          <p class="vote-average">8.5 rating</p>
+          <i class="far fa-heart"></i>
+        </div>
+      </li>
+      <li>
+        <div class="movie-card">
+          <img src="poster2.jpg" alt="Movie Poster">
+          <h2>Title 2</h2>
+          <p class="vote-count">200 votes</p>
+          <p class="vote-average">7.2 rating</p>
+          <i class="far fa-heart"></i>
+        </div>
+      </li>
+      <!-- More movie cards here -->
+    </ul>
+  </div>
+
+  <div class="pagination">
+    <button disabled>Previous</button>
+    <span>Current Page: 1</span>
+    <button>Next</button>
+  </div>
+
+  <footer>
+    <p>© 2023 Movie Deck</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
