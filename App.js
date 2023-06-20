@@ -1,14 +1,28 @@
 // Fetch movies from the external API
-function fetchMovies() {
-  fetch('https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1')
-    .then(response => response.json())
-    .then(data => {
-      const movies = data.results;
-      displayMovies(movies);
-    })
-    .catch(error => {
-      console.log('Error fetching movies:', error);
-    });
+async function fetchMovies(){
+	try{
+		const options = {
+		  method: 'GET',
+		  headers: {
+			accept: 'application/json',
+			Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NmI3MDRmZDY5MTEwYjRhNDgxYzE0ODJiZDViNDE3YyIsInN1YiI6IjY0OTFkNmViYzJmZjNkMDBlMmUyMzJlYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.RmaUsxDrB9p__eh7pAA5hPQ2qcTmdIck2L_jFtWuNUs'
+		  }
+		};
+		const url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`
+
+			const response = await fetch(url, options)
+
+			const data = await response.json();
+			const movies = data.results;
+			displayMovies(movies);
+
+			console.log(data, "data debug")
+
+			} catch(error) {
+
+			console.log('Error fetching movies:', error);
+
+		}
 }
 
 // Display movies on the web page
